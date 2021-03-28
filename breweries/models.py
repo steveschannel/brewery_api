@@ -30,5 +30,4 @@ class Brewery(models.Model):
     )
 
     point = models.PointField(geography=True, default=None, null=True)
-
     tags = models.CharField(max_length=100, null=True)
