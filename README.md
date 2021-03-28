@@ -11,6 +11,8 @@ Django (Geodjango) + Graphene (GraphQL) + Postgres (GIS extensions) + Docker.
 
 docker-compose build
 
+docker-compose run --rm api ./manage.py loaddata --app breweries fetch_brewery/fixtures/breweries.json
+
 docker-compose run --rm api ./manage.py migrate
 
 docker-compose run --rm api ./manage.py makemigrations
