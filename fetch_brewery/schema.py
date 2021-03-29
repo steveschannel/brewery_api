@@ -13,7 +13,7 @@ class Query(graphene.ObjectType):
     def resolve_help(self, info, **kwargs):
         return "query { breweries( name: "", longitude: null, latitude: null, km:100 ) { id name city } }"
 
-    def resolve_breweries(self, info, name=None, longitude=None, latitude=None, km=None, *args, **kwargs):
+    def resolve_breweries(self, info, name=None, longitude=None, latitude=None, km=100, *args, **kwargs):
 
         return FindBreweries(name, longitude, latitude, km)
 

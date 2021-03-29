@@ -8,7 +8,7 @@ from django.contrib.gis.measure import Distance
 
 
 def FindBreweries(name, longitude, latitude, km):
-
+    
     if name and latitude and longitude:
         search_pnt = Point(longitude, latitude, srid=4326)
         qs = Brewery.objects.filter(
